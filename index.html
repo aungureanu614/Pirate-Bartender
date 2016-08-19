@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Pirate Bartender</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	<div class="bar-sign"></div>
 
-	<script type="text/javascript" src="apps/app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Pirate Bartender</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="bar">
+        <h1>Ahoy Matey!</h1>
+        <h1>Welcome to th' barnacle-covered bar</h1>
+    </div>
+    <form class="customer-likes">
+        <p class="styling"> Do ye like yer drinks strong?</p>
+        <div id="answer-strong" class="styling">
+            <input type="radio" name="strong" value="yes">Yarr!
+            <input type="radio" name="strong" value="no">No
+        </div>
+        <p class="styling"> Do ye like it with a salty tang?</p>
+        <div id="answer-salty" class="styling">
+            <input type="radio" name="salty" value="yes">Yarr!
+            <input type="radio" name="salty" value="no">No
+        </div>
+        <p class="styling"> Are ye a lubber who likes it bitter? </p>
+        <div id="answer-bitter" class="styling">
+            <input type="radio" name="bitter" value="yes">Yarr!
+            <input type="radio" name="bitter" value="no">No
+        </div>
+        <p class="styling"> Would ye like a bit of sweetness with yer poison? </p>
+        <div id="answer-sweet" class="styling">
+            <input type="radio" name="sweet" value="yes">Yarr!
+            <input type="radio" name="sweet" value="no">No
+        </div>
+        <p class="styling"> Are ye one for a fruity finish?</p>
+        <div id="answer-fruity" class="styling">
+            <input type="radio" name="fruity" value="yes">Yarr!
+            <input type="radio" name="fruity" value="no">No
+        </div>
+        <div class="buttons styling">
+            <button id="submit">Get me poison</button>
+            <button id="clear">Start o'er</button>
+        </div>
+    </form>
+    <div class="response"></div>
+    <script type="text/javascript" src="apps/app.js"></script>
 </body>
+
 </html>

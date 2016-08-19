@@ -2,7 +2,8 @@
      box-sizing: border-box;
      -webkit-font-smoothing: antialiased;
      font-size: 62.5%;
-     background: black
+     background: black;
+     color: orange;
  }
  
  *,
@@ -10,9 +11,16 @@
  *:after {
      box-sizing: inherit;
  }
+ 
+ .bar h1 {
+     text-align: center;
+     font-size: 2rem;
+     padding: 1%;
+ }
 
-.bar-sign{
-    background: url('..images/bar.jpg');
-    height: 10rem;
-    z-index: 10;
-}
+ 
+ .styling {
+     padding: .5% 38%;
+    font-size: 1rem;
+
+ }
