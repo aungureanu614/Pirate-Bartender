@@ -18,9 +18,17 @@
      padding: 1%;
  }
 
+
  
  .styling {
-     padding: .5% 38%;
-    font-size: 1rem;
-
+     padding: 1.5% 41%;
+     font-size: 1rem;
+     width: 140%;
  }
+ 
+.center{
+	text-align: center;
+}
+.buttons{
+	padding-bottom: 3%;
+}
