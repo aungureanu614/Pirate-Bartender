@@ -51,16 +51,50 @@ var Preferences = function() {
 var prefs = new Preferences(); //create new instance of Preferences which will get input from the customer
 
 
-/*var Bartender = function(){
+var Bartender = function() {
+
 };
 
-var Drink = function(ingredient){
-	this.ingredients.push(ingredient);
+var Jibbers = new Bartender();
+
+
+var Drink = function(ingredient) {
+    //this.ingredients.push(ingredient);
+    this.ingredient = ingredient;
 };
 
-Bartender.prototype.createDrink = function(preferences){
+Bartender.prototype.createDrink = function(preferences) {
+    var finalDrink = [];
+    if (preferences.strong === true) {
+        var randomStrong = Math.floor(Math.random() * newPantry.strong.items.length);
+        var strongIngredient = newPantry.strong.items[randomStrong];
+        finalDrink.push(strongIngredient);
+    }
+    if (preferences.salty === true) {
+        var randomSalty = Math.floor(Math.random() * newPantry.salty.items.length);
+        var saltyIngredient = newPantry.salty.items[randomSalty];
+        finalDrink.push(saltyIngredient);
+    }
+    if (preferences.bitter === true) {
+        var randomBitter = Math.floor(Math.random() * newPantry.bitter.items.length);
+        var bitterIngredient = newPantry.bitter.items[randomBitter];
+        finalDrink.push(bitterIngredient);
+    }
+    if (preferences.sweet === true) {
+        var randomSweet = Math.floor(Math.random() * newPantry.sweet.items.length);
+        var sweetIngredient = newPantry.sweet.items[randomSweet];
+        finalDrink.push(sweetIngredient);
+    }
+    if (preferences.fruity === true) {
+        var randomFruity = Math.floor(Math.random() * newPantry.fruity.items.length);
+        var fruityIngredient = newPantry.fruity.items[randomFruity];
+        finalDrink.push(fruityIngredient);
+    }
 
-};*/
+    var newDrink = new Drink(finalDrink);
+    console.log(newDrink.ingredient);
+
+};
 
 
 $(function() {
@@ -114,6 +148,8 @@ function bartenderAsk(questions) {
             prefs.fruity = false;
         }
 
+
+        Jibbers.createDrink(prefs);
     });
 
 }
