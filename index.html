@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Pirate Bartender</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	<div class="bar-sign"></div>
 
-	<script type="text/javascript" src="apps/app.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Pirate Bartender</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="bar">
+        <h1>Ahoy Matey!</h1>
+        <h1>Welcome to th' barnacle-covered bar</h1>
+    </div>
+    <form id="bartender-questions">
+    <div class="q-a"></div>
+        <div class='buttons center'>
+            <button id='submit'>Get me drink!</button>
+        </div>
+    </form>
+    <div class="response"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="apps/app.js"></script>
 </body>
+
 </html>
