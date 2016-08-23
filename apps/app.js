@@ -59,9 +59,12 @@ var Jibbers = new Bartender();
 
 
 var Drink = function(ingredient) {
-    //this.ingredients.push(ingredient);
+
     this.ingredient = ingredient;
 };
+
+
+
 
 Bartender.prototype.createDrink = function(preferences) {
     var finalDrink = [];
@@ -91,10 +94,41 @@ Bartender.prototype.createDrink = function(preferences) {
         finalDrink.push(fruityIngredient);
     }
 
+
+
     var newDrink = new Drink(finalDrink);
-    console.log(newDrink.ingredient);
+    giveDrink(newDrink.ingredient);
+    //console.log(newDrink.ingredient);
 
 };
+
+
+
+
+var NameDrink = function(name) {  
+    this.name = name;
+}
+
+var Names = function(adj, noun) {
+    this.adj = adj;
+    this.noun = noun;
+}
+
+var ajdectives = new NameDrink(["Fluffy", "Soft", "Droopy", "Loopy"]);
+var nouns = new NameDrink(["Turtle", "Dolphin", "Sea-Cow", "Chinchilla"]);
+
+var randomName = new Names(ajdectives, nouns);
+
+Bartender.prototype.giveName = function(){
+    var nameArr = [];
+    var randomAdj = Math.floor(Math.random() * randomName.adj.name.length);
+    var adjective = randomName.adj.name[randomAdj];
+    var randomNoun = Math.floor(Math.random() * randomName.noun.name.length);
+    var noun = randomName.noun.name[randomNoun];
+    nameArr.push(adjective, noun);
+    console.log(nameArr);
+}
+
 
 
 $(function() {
@@ -110,6 +144,7 @@ function bartenderAsk(questions) {
     });
 
     $('#submit').on('click', function(event) {
+        startAgain();
         event.preventDefault();
         //gets the value of the customer answers 
         var radioStrong = $("input[name='question-strong']:checked").val();
@@ -150,6 +185,18 @@ function bartenderAsk(questions) {
 
 
         Jibbers.createDrink(prefs);
+        Jibbers.giveName();
+
     });
 
+}
+
+function startAgain() {
+    $('.response').empty();
+}
+
+function giveDrink(drink) {
+    //  Jibbers.nameDrink(drink);
+    var strDrink = drink.join(', ');
+    $('.response').append(strDrink);
 }
